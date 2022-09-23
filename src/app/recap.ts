@@ -16,3 +16,5 @@ class Person {
   }
 
 }
+
+const carlos = new Person(22, 'Carlos');
