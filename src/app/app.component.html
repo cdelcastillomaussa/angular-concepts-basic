@@ -40,7 +40,16 @@ y mandarle a esto los atributos de html -->
 <h1>Eventos Binding de Angular</h1>
 <p>Edad {{person.age}}</p>
 <button (click)="increage()">Age ++</button>
-
+<div class="box" (scroll)="onScroll($event)">
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, facere! Quos laudantium qui aperiam molestiae sed quam accusantium, similique labore, rem asperiores totam dignissimos culpa tempora veniam aliquam tenetur in?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, nostrum laboriosam fugit recusandae, iure a dicta enim aliquid totam ullam debitis, repellat doloremque nemo maiores delectus corporis non ea! Nisi!
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nesciunt est aspernatur quod aut nam magni rerum itaque eligendi neque, maxime dignissimos, impedit placeat omnis ducimus. Reiciendis in laudantium asperiores!
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eaque explicabo rerum eius minus ea quaerat officiis nobis blanditiis! Temporibus expedita eveniet voluptates fugiat id facilis provident molestiLoremas molestiae ipsum.
+ </p>
+</div>
+<p>Nombre {{ person.name }}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)"/>
 
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
+
