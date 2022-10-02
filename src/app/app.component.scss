@@ -20,6 +20,33 @@
   }
 }
 
+.message-error {
+  background-color: red;
+  color: #fff;
+  opacity: 0;
+  transition: all linear .5s;
+  &.active{
+    opacity: 1;
+  }
+}
+
+.clase-padre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid {
+    border-color: green;
+  }
+}
+
 @media screen and (min-width: 40em){
   .products--grid {
     display: grid;
