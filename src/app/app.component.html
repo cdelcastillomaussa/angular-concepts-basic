@@ -1,3 +1,28 @@
+<h1>ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name" />
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'carlitos'">
+    La persona es carlitos
+  </p>
+  <p *ngSwitchCase="'julio'">
+    La persona es julio>
+  <p *ngSwitchCase="'belia'">
+    La persona es belia
+  </p>
+  <p *ngSwitchDefault>
+    NO hace match
+  </p>
+</div>
+
+<!--<p *ngIf="person.name === 'carlitos'">
+  La persona es carlitos
+</p>
+<p *ngIf="person.name === 'julio'">
+  La persona es julio>
+<p *ngIf="person.name === 'belia'">
+  La persona es belia
+</p> -->
+<hr />
 <h1>*ngFor Objs</h1>
 <div>
   <div *ngFor="let product of products">
@@ -11,10 +36,10 @@
 
 <hr />
 <h1>*ngFor</h1>
-<input type="text" required [(ngModel)]="newName"/>
+<input type="text" required [(ngModel)]="newName" />
 <button (click)="addName()">Add name</button>
 <ul>
-<!--La variable name -- esta almacenando lo que esta en el array names-->
+  <!--La variable name -- esta almacenando lo que esta en el array names-->
 
   <li *ngIf="names.length === 0">No hay nombres</li>
   <li *ngFor="let name of names; index as i">
@@ -25,7 +50,7 @@
 
 <hr />
 <h1>*ngIf</h1>
-<input type="text" required [(ngModel)]="person.name"/>
+<input type="text" required [(ngModel)]="person.name" />
 <p *ngIf="person.name === 'carlos'">Soy carlos porque se cumple la condición</p>
 <p *ngIf="person.name === 'alberto' && person.age === 18; else elseBlock">Soy Alberto</p>
 
@@ -35,11 +60,11 @@
 <hr />
 <h1>NgModel</h1>
 <p>Nombre {{ person.name }}</p>
-<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
 <p>Valid: {{ nameInput.valid }}</p>
 
 <p>Age {{ person.age }}</p>
-<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age" />
 <p>Valid: {{ ageInput.valid }}</p>
 
 <hr />
@@ -85,15 +110,19 @@ y mandarle a esto los atributos de html -->
 <p>Edad {{person.age}}</p>
 <button (click)="increage()">Age ++</button>
 <div class="box" (scroll)="onScroll($event)">
- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, facere! Quos laudantium qui aperiam molestiae sed quam accusantium, similique labore, rem asperiores totam dignissimos culpa tempora veniam aliquam tenetur in?
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, nostrum laboriosam fugit recusandae, iure a dicta enim aliquid totam ullam debitis, repellat doloremque nemo maiores delectus corporis non ea! Nisi!
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nesciunt est aspernatur quod aut nam magni rerum itaque eligendi neque, maxime dignissimos, impedit placeat omnis ducimus. Reiciendis in laudantium asperiores!
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eaque explicabo rerum eius minus ea quaerat officiis nobis blanditiis! Temporibus expedita eveniet voluptates fugiat id facilis provident molestiLoremas molestiae ipsum.
- </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, facere! Quos laudantium qui aperiam molestiae sed
+    quam accusantium, similique labore, rem asperiores totam dignissimos culpa tempora veniam aliquam tenetur in?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, nostrum laboriosam fugit recusandae, iure a dicta
+    enim aliquid totam ullam debitis, repellat doloremque nemo maiores delectus corporis non ea! Nisi!
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nesciunt est aspernatur quod aut nam magni rerum
+    itaque eligendi neque, maxime dignissimos, impedit placeat omnis ducimus. Reiciendis in laudantium asperiores!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eaque explicabo rerum eius minus ea quaerat
+    officiis nobis blanditiis! Temporibus expedita eveniet voluptates fugiat id facilis provident molestiLoremas
+    molestiae ipsum.
+  </p>
 </div>
 <p>Nombre {{ person.name }}</p>
-<input type="text" [value]="person.name" (keyup)="changeName($event)"/>
+<input type="text" [value]="person.name" (keyup)="changeName($event)" />
 
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
-
