@@ -32,18 +32,19 @@ export class AppComponent {
     name: 'El mejor juguete',
     price: 543,
     category: 'Niños',
-    img: 'eje'
+    img: './assets/images/2.png'
   },
   {
     name: 'Bicicleta casi nueva',
     price: 500,
     category: 'Trasporte',
-    img: 'AS'
+    img: './assets/images/1.jpeg'
   },
   {
     name: 'Collecion de albumnes',
     price: 34,
-    category: 'Entretenimiento'
+    category: 'Entretenimiento',
+    img: './assets/images/4.jpg'
   },
   {
     name: 'Mis libros',
