@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Product } from './product.model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,6 +26,31 @@ export class AppComponent {
   //Creacion de array
   names: string[] = ['Carlos', 'Juan', 'Nico'];
   newName = '';
+
+  products: Product[] = [
+  {
+    name: 'El mejor juguete',
+    price: 543,
+    category: 'Niños',
+    img: 'eje'
+  },
+  {
+    name: 'Bicicleta casi nueva',
+    price: 500,
+    category: 'Trasporte',
+    img: 'AS'
+  },
+  {
+    name: 'Collecion de albumnes',
+    price: 34,
+    category: 'Entretenimiento'
+  },
+  {
+    name: 'Mis libros',
+    price: 23,
+    category: 'Escolar'
+  }
+  ]
 
 
   toggleButton(){
